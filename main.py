@@ -1,8 +1,10 @@
 import json
 import os
+import subprocess
 
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+from git import Repo
 
 client_id = "3f41664239824c288f53bb2231903ef7"
 client_secret = os.environ['CLIENT_SECRET']
@@ -45,11 +47,13 @@ def generate_text(tracks):
 
 def main():
     print("starting")
-    exit(1)
     tracks = get_saved_songs()
     generate_json(tracks)
     generate_text(tracks)
 
+    subprocess.run("git add -A".split(" "))
+    subprocess.run("git commit -m 'commit'".split(" "))
+    subprocess.run("git push".split(" "))
 
 if __name__ == "__main__":
     main()
