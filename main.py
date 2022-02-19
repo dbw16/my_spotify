@@ -44,6 +44,7 @@ def generate_text(tracks):
 
 
 def main():
+    print("starting")
     tracks = get_saved_songs()
     generate_json(tracks)
     generate_text(tracks)
