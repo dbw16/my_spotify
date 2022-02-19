@@ -9,6 +9,9 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  CLIENT_SECRET: $CLIENT_SECRET
+
 jobs:
   run:
 
