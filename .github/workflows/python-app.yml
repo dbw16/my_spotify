@@ -9,8 +9,6 @@ on:
   pull_request:
     branches: [ master ]
 
-env:
-  CLIENT_SECRET: $CLIENT_SECRET
 
 jobs:
   run:
@@ -30,5 +28,6 @@ jobs:
 
     - name: run script
       run: |
-        python main.py
-
+        echo "starting"; which python; python main.py
+      env:
+        CLIENT_SECRET: $CLIENT_SECRET
