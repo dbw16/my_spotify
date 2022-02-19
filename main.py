@@ -55,5 +55,6 @@ def main():
     subprocess.run("git commit -m 'commit'".split(" "))
     subprocess.run("git push".split(" "))
 
+
 if __name__ == "__main__":
     main()
