@@ -5,7 +5,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 client_id = "3f41664239824c288f53bb2231903ef7"
-client_secret = os.environ['client_secret']
+client_secret = os.environ['CLIENT_SECRET']
 
 redirect_uri = "http://127.0.0.1:9090"  # declared in the spotify app
 
